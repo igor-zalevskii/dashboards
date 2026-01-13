@@ -1,6 +1,4 @@
-# Итоговая работа - АНАЛИЗ И ВИЗУАЛИЗАЦИЯ ПРОДАЖ ИНТЕРНЕТ-МАГАЗИНА  
-
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/03d.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/03d.png)  
 
 ## Среда выполнения  
 
@@ -9,8 +7,8 @@
 
 
 ## **Файлы решения**:  
-- [`solution.xlsx`](module_01_excel_data_viz/topic_10_final/solution.xlsx)  
-- [`solution.pbix`](module_01_excel_data_viz/topic_10_final/solution.pbix)  
+- [`solution.xlsx`](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/solution.xlsx)  
+- [`solution.pbix`](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/solution.pbix)  
 
 
 ## Данные  
@@ -25,31 +23,26 @@
 
 **Описание:** Датасет содержит данные о продажах из онлайн-магазина Blinkit. Включает 6 CSV файлов, которые содержат сведения о товарах, заказах, акциях, выручке.  
 
-## Условия задач  
-
-[Ссылка на условие](https://wiki.astondevs.ru/spaces/LDA/pages/104954497/%D0%98%D1%82%D0%BE%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F+%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0+-+%D0%90%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7+%D0%B8+%D0%92%D0%B8%D0%B7%D1%83%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F+%D0%9F%D1%80%D0%BE%D0%B4%D0%B0%D0%B6+%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D0%9C%D0%B0%D0%B3%D0%B0%D0%B7%D0%B8%D0%BD%D0%B0)  
-
-
 ## Решение  
 ### Этап 1. Подготовка среды
 
-Создание палитры цветов, используемых компанией:  
+Создание палитры цветов:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00a.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00a.png)  
 
 Создание кастомной палитры в Excel:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00b.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00b.png)  
 
 Примеры использования кастомной палитры:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00d.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00d.png)  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00e.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00e.png)  
 
 [Проверка палитры цветов](https://color.adobe.com/ru/create/color-accessibility) на восприятие людьми с дальтонизмом:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00f.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00f.png)  
 
 
 ### Этап 2. Подготовка данных (Excel + Power Query)  
@@ -58,19 +51,19 @@
 
 Составить диаграмму можно в приложении [drawsql](https://drawsql.app/teams/-4118/diagrams/orders-blinkit).  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00_erd.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00_erd.png)  
 
 #### Импорт данных  
 
 Загрузим все csv-файлы (6 таблиц) в Power Query.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/01a.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01a.png)  
 
 Используя Power Query, проведем очистку данных:  
 
 - Удаление неиспользуемых данных (столбцы, таблицы).  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/01b.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01b.png)  
 
 _В таблице `customers` есть столбец `pincode`, в нём хранятся 6-тизначные цифры, похожие на незашифрованные пароли. Это является серьезной угрозой нарушению безопасности персональных данных. Если такое было бы замечено в настоящей базе данных, то следовало бы (усилием команды) исправить это и зашифровать данные._  
 
@@ -80,30 +73,30 @@ _В таблице `customers` есть столбец `pincode`, в нём хр
 - Приведение данных к одной форме. Приведите данные к нужным типам (дата, число, текст).
 Частая проблема - десятичные числа в разных странах записываются по-разному. Нужно заменить `.` на `,`, изменить тип данных на десятичные.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/01c.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01c.png)  
 
 - Удалим дубликаты.  
 Используем атрибуты `id` в таблицах, чтобы проверить уникальность записей. Например, в таблице `customers` это столбец `customer_id`, в таблице `orders` - `order_id`.  
 
 Можно загрузить add-in "Python for Excel", чтобы использовать Python (включая библиотеки re для регулярных выражений или pandas для работы с матрицами).  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00python.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00python.png)  
 
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/00_excel.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00_excel.png)  
 
 
 #### Трансформация данных:
 
 Сгруппируем  таблицы заказов и покупателей по `id` покупателей:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/01d.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01d.png)  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/01e.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01e.png)  
 
 Создадим вычисляемый столбец общей суммы продажи клиентов.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/01f.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01f.png)  
 
 
 ### Этап 3. Анализ данных (Excel)
@@ -112,13 +105,13 @@ _В таблице `customers` есть столбец `pincode`, в нём хр
 
 Создадим сводную таблицу.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02a.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02a.png)  
 ##### Анализ динамики во времени
 Проведем анализ динамики во времени
 
 В 2023 и 2024 годах в зимняя время продажи снижались.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02b.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02b.png)  
 
 
 
@@ -127,7 +120,7 @@ _В таблице `customers` есть столбец `pincode`, в нём хр
 
 Продажи по категориям товаров:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02f.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02f.png)  
 
 
 ##### Продажи по регионам.  
@@ -135,26 +128,26 @@ _В таблице `customers` есть столбец `pincode`, в нём хр
 Около 300 строк с городами. В таблице нет группировки по регионам.  
 Top-10 регионов по продажам:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02g.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02g.png)  
 
 
 ##### Средний чек и количество товаров в заказе.  
 
 Применим эти атрибуты в сводной таблице:  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02h.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02h.png)  
 
 Видим, что:  
 - Средний чек: 2201.  
 - Среднее количество товаров в заказе: 2 шт.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02i.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02i.png)  
 
 Предпочтения методов оплаты покупателей:  
 все методы оплаты имеют близкое значение (около 1/4 каждый); не выявлено взаимосвязи между средним чеком  и способом оплаты.  
 
 Пятерка самых часто заказываемых товаров:  
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/02i.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/02i.png)  
 
 > Товар, который заказывают реже всего - шпинат: в 2 раза реже печенья и в 8 раз реже, чем хлеб.  
 
@@ -170,15 +163,15 @@ Top-10 регионов по продажам:
 
 ##### Моделирование данных: связи между таблицами, созданные в Excel.
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/03a.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/03a.png)  
 
 #### Визуализация в Power BI  
 
 ##### Создание интерактивного дашборда  
 Дашборд включает сводные показатели: общий объем продаж, количество заказов, средний чек, количество); графики; фильтры.  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/03b.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/03b.png)  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/03c.png)  
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/03c.png)  
 
-![Скриншот](module_01_excel_data_viz/topic_10_final/screenshots/03d.png)
+![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/03d.png)
