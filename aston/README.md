@@ -34,12 +34,6 @@
 
 ![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00b.png)  
 
-Примеры использования кастомной палитры:  
-
-![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00d.png)  
-
-![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00e.png)  
-
 [Проверка палитры цветов](https://color.adobe.com/ru/create/color-accessibility) на восприятие людьми с дальтонизмом:  
 
 ![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/00f.png)  
@@ -65,7 +59,7 @@
 
 ![Скриншот](https://github.com/igor-zalevskii/dashboards/blob/main/aston/screenshots/01b.png)  
 
-_В таблице `customers` есть столбец `pincode`, в нём хранятся 6-тизначные цифры, похожие на незашифрованные пароли. Это является серьезной угрозой нарушению безопасности персональных данных. Если такое было бы замечено в настоящей базе данных, то следовало бы (усилием команды) исправить это и зашифровать данные._  
+_В таблице `customers` есть столбец `pincode`, в нём хранятся 6-тизначные цифры, похожие на незашифрованные пароли. Стоит зашифровать данные._  
 
 - Удалим пробелы вначале и конце столбцов с типом данных `текст`.  
 `Transform` -> `Trim`  
